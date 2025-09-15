@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind-friendly base resets and sensible defaults */
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-800 antialiased;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+  }
+
+  a {
+    @apply text-indigo-600 hover:text-indigo-500;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-semibold;
+  }
+
+  button {
+    @apply rounded-md;
+  }
+}
+
+/* Small helpers for the app layout — keep page content full width and centered inside the Layout component */
+.app-container {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Keep forms and panels visually consistent */
+.panel {
+  @apply bg-white shadow rounded-lg p-6;
+}
+
+/* Utility: visually-hidden (for screen-reader text if needed) */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
